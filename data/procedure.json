@@ -1,0 +1,25 @@
+{
+  "contexts": [
+    {
+      "id": "court_procedural_crisis",
+      "title": "程序危机",
+      "description": "检方要求立即中止问询并宣判。",
+      "actions": [
+        {
+          "id": "action_demand_inquiry",
+          "name": "提出异议并继续审问",
+          "description": "指出证词存在未解释的明显盲点，请求准许进一步询问。",
+          "result": "correct",
+          "scene": "scene_procedure_continue"
+        },
+        {
+          "id": "action_accept_decision",
+          "name": "默许检方主张",
+          "description": "放弃进一步抗辩，接受审理中止。",
+          "result": "wrong",
+          "scene": "scene_procedure_fail"
+        }
+      ]
+    }
+  ]
+}

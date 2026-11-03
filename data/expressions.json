@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "expressions": {
+    "protagonist": [
+      "normal",
+      "thinking",
+      "point",
+      "sweat",
+      "confident",
+      "shocked"
+    ],
+    "prosecutor": [
+      "normal",
+      "confident",
+      "smug",
+      "sweat",
+      "shocked"
+    ],
+    "witness": [
+      "normal",
+      "nervous",
+      "sweat",
+      "shocked",
+      "break"
+    ],
+    "judge": [
+      "normal",
+      "stern",
+      "thinking",
+      "gavel"
+    ],
+    "assistant": [
+      "normal",
+      "thinking",
+      "cheerful",
+      "worried"
+    ]
+  }
+}

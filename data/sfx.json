@@ -1,0 +1,14 @@
+{
+  "sfx": [
+    { "id": "sfx_objection" },
+    { "id": "sfx_hold_it" },
+    { "id": "sfx_take_that" },
+    { "id": "sfx_gavel" },
+    { "id": "sfx_evidence_present" },
+    { "id": "sfx_damage" },
+    { "id": "sfx_desk_slam" },
+    { "id": "sfx_realization" },
+    { "id": "sfx_dialogue_advance" },
+    { "id": "sfx_dialogue_type" }
+  ]
+}

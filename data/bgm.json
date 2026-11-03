@@ -1,0 +1,10 @@
+{
+  "bgm": [
+    { "id": "bgm_trial" },
+    { "id": "bgm_testimony" },
+    { "id": "bgm_questioning" },
+    { "id": "bgm_pursuit" },
+    { "id": "bgm_investigation" },
+    { "id": "bgm_reminiscence" }
+  ]
+}

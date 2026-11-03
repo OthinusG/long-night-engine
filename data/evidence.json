@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "evidence": [
+    {
+      "id": "attorney_badge",
+      "name": "律师徽章",
+      "description": "我引以为傲的辩护律师徽章，出示它可以向别人证明自己的职业身份。",
+      "presentable": true
+    },
+    {
+      "id": "crime_report",
+      "name": "案发报告",
+      "description": "现场勘验初步记录，记载了案发时段与关键物证。",
+      "presentable": true,
+      "versions": {
+        "verified": {
+          "name": "案发报告（核验）",
+          "description": "经与现场证物比对核实，确认了嫌疑人不在场证明的矛盾点。"
+        }
+      }
+    },
+    {
+      "id": "pocket_watch",
+      "name": "停走的怀表",
+      "description": "在现场发现的怀表，指针停在九点十五分。",
+      "presentable": true
+    }
+  ]
+}

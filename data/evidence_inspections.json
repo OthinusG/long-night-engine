@@ -1,0 +1,15 @@
+{
+  "inspections": [
+    {
+      "evidence_id": "pocket_watch",
+      "image": "pocket_watch_detail",
+      "hotspots": [
+        {
+          "id": "watch_glass",
+          "rect": [0.35, 0.35, 0.30, 0.30],
+          "scene": "scene_inspect_watch_glass"
+        }
+      ]
+    }
+  ]
+}

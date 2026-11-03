@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Finder
+.Spotlight-V100
+.Trashes
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*~
+
+# Godot
+.godot/
+
+# Generated exports
+dist/
+build/
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+*.py[cod]

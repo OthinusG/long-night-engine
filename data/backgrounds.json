@@ -1,0 +1,11 @@
+{
+  "backgrounds": [
+    { "id": "courtroom_defense" },
+    { "id": "courtroom_prosecution" },
+    { "id": "courtroom_witness" },
+    { "id": "courtroom_judge" },
+    { "id": "office" },
+    { "id": "detention_center" },
+    { "id": "crime_scene" }
+  ]
+}

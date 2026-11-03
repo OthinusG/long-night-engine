@@ -1,0 +1,125 @@
+{
+  "backgrounds": [
+    "courtroom_defense",
+    "courtroom_judge",
+    "courtroom_prosecution",
+    "courtroom_witness",
+    "crime_scene",
+    "detention_center",
+    "office"
+  ],
+  "bgm": [
+    "bgm_investigation",
+    "bgm_pursuit",
+    "bgm_questioning",
+    "bgm_reminiscence",
+    "bgm_testimony",
+    "bgm_trial"
+  ],
+  "chapters": [
+    "demo"
+  ],
+  "characters": [
+    "assistant",
+    "judge",
+    "prosecutor",
+    "protagonist",
+    "witness"
+  ],
+  "evidence": [
+    "attorney_badge",
+    "crime_report",
+    "pocket_watch"
+  ],
+  "evidence_versions": {
+    "attorney_badge": [],
+    "crime_report": [
+      "verified"
+    ],
+    "pocket_watch": []
+  },
+  "expressions": {
+    "assistant": [
+      "cheerful",
+      "normal",
+      "thinking",
+      "worried"
+    ],
+    "judge": [
+      "gavel",
+      "normal",
+      "stern",
+      "thinking"
+    ],
+    "prosecutor": [
+      "confident",
+      "normal",
+      "shocked",
+      "smug",
+      "sweat"
+    ],
+    "protagonist": [
+      "confident",
+      "normal",
+      "point",
+      "shocked",
+      "sweat",
+      "thinking"
+    ],
+    "witness": [
+      "break",
+      "nervous",
+      "normal",
+      "shocked",
+      "sweat"
+    ]
+  },
+  "format_version": 1,
+  "inspections": [
+    "pocket_watch"
+  ],
+  "locations": [
+    "location_crime_scene",
+    "location_office"
+  ],
+  "procedures": [
+    "court_procedural_crisis"
+  ],
+  "scenes": [
+    "scene_break_testimony",
+    "scene_court_intro",
+    "scene_court_testimony",
+    "scene_court_wrong",
+    "scene_demo_ending",
+    "scene_demo_intro",
+    "scene_examine_table",
+    "scene_examine_window",
+    "scene_inspect_watch_glass",
+    "scene_investigation_start",
+    "scene_present_badge_office",
+    "scene_present_generic_office",
+    "scene_press_s01",
+    "scene_press_s02",
+    "scene_press_s03",
+    "scene_press_s04",
+    "scene_procedure_continue",
+    "scene_procedure_fail",
+    "scene_topic_alibi",
+    "scene_topic_overview"
+  ],
+  "sfx": [
+    "sfx_damage",
+    "sfx_desk_slam",
+    "sfx_dialogue_advance",
+    "sfx_dialogue_type",
+    "sfx_evidence_present",
+    "sfx_gavel",
+    "sfx_hold_it",
+    "sfx_objection",
+    "sfx_realization",
+    "sfx_take_that"
+  ],
+  "testimonies": [
+    "testimony_demo_01"
+  ]
+}

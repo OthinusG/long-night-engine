@@ -1,0 +1,25 @@
+{
+  "format_version": 1,
+  "characters": [
+    {
+      "id": "protagonist",
+      "display_name": "辩护律师"
+    },
+    {
+      "id": "prosecutor",
+      "display_name": "检察官"
+    },
+    {
+      "id": "witness",
+      "display_name": "证人"
+    },
+    {
+      "id": "judge",
+      "display_name": "法官"
+    },
+    {
+      "id": "assistant",
+      "display_name": "助手"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "presets": [
+    {
+      "id": "demo_trial_start",
+      "description": "Start of demo testimony",
+      "evidence": [
+        "attorney_badge",
+        "crime_report"
+      ],
+      "testimony": "testimony_demo_01",
+      "statement": "demo_s01"
+    }
+  ]
+}

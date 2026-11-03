@@ -1,0 +1,1366 @@
+{
+  "entry_scene": "scene_demo_intro",
+  "locations": {
+    "location_crime_scene": {
+      "background": "crime_scene",
+      "characters": [],
+      "generic_present": "scene_present_generic_office",
+      "hotspots": [
+        {
+          "id": "window",
+          "rect": [
+            0.1,
+            0.1,
+            0.2,
+            0.3
+          ],
+          "scene": "scene_examine_window",
+          "source": {
+            "file": "demo/main.md",
+            "line": 65
+          }
+        },
+        {
+          "id": "table_report",
+          "rect": [
+            0.35,
+            0.45,
+            0.3,
+            0.25
+          ],
+          "scene": "scene_examine_table",
+          "source": {
+            "file": "demo/main.md",
+            "line": 70
+          }
+        }
+      ],
+      "id": "location_crime_scene",
+      "moves": [
+        "location_office"
+      ],
+      "name": "案发现场",
+      "present_reactions": {},
+      "source": {
+        "file": "demo/main.md",
+        "line": 58
+      },
+      "topics": []
+    },
+    "location_office": {
+      "background": "office",
+      "characters": [
+        "assistant"
+      ],
+      "generic_present": "scene_present_generic_office",
+      "hotspots": [],
+      "id": "location_office",
+      "moves": [
+        "location_crime_scene"
+      ],
+      "name": "律师事务所",
+      "present_reactions": {
+        "attorney_badge": "scene_present_badge_office"
+      },
+      "source": {
+        "file": "demo/main.md",
+        "line": 38
+      },
+      "topics": [
+        {
+          "id": "case_overview",
+          "locked": false,
+          "scene": "scene_topic_overview",
+          "source": {
+            "file": "demo/main.md",
+            "line": 47
+          },
+          "title": "关于案件委托"
+        },
+        {
+          "id": "suspect_alibi",
+          "locked": true,
+          "scene": "scene_topic_alibi",
+          "source": {
+            "file": "demo/main.md",
+            "line": 52
+          },
+          "title": "不在场证明"
+        }
+      ]
+    }
+  },
+  "scenes": {
+    "scene_break_testimony": {
+      "id": "scene_break_testimony",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_objection",
+          "source": {
+            "file": "demo/main.md",
+            "line": 286
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "point",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 287
+          },
+          "visible": true
+        },
+        {
+          "expression": "point",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 289
+          },
+          "speaker": "protagonist",
+          "text": "看招！\n证人，你的证言存在着致命的矛盾！"
+        },
+        {
+          "character": "witness",
+          "expression": "shocked",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 293
+          },
+          "visible": true
+        },
+        {
+          "expression": "shocked",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 295
+          },
+          "speaker": "witness",
+          "text": "什……什么？！"
+        },
+        {
+          "character": "protagonist",
+          "expression": "confident",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 298
+          },
+          "visible": true
+        },
+        {
+          "expression": "confident",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 300
+          },
+          "speaker": "protagonist",
+          "text": "这份《案发报告》上记录得清清楚楚！\n案发现场的供电记录显示，当晚八点半至九点半全楼停电且门窗紧闭！\n在完全无光的密封环境中，你根本不可能单凭肉眼看清室内！"
+        },
+        {
+          "character": "witness",
+          "expression": "break",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 305
+          },
+          "visible": true
+        },
+        {
+          "op": "sfx",
+          "sfx": "sfx_damage",
+          "source": {
+            "file": "demo/main.md",
+            "line": 306
+          }
+        },
+        {
+          "expression": "break",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 308
+          },
+          "speaker": "witness",
+          "text": "哇啊啊啊啊啊——！！"
+        },
+        {
+          "character": "prosecutor",
+          "expression": "sweat",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 311
+          },
+          "visible": true
+        },
+        {
+          "expression": "sweat",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 313
+          },
+          "speaker": "prosecutor",
+          "text": "这……怎么可能……！"
+        },
+        {
+          "background": "courtroom_judge",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 316
+          }
+        },
+        {
+          "character": "judge",
+          "expression": "gavel",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 317
+          },
+          "visible": true
+        },
+        {
+          "op": "sfx",
+          "sfx": "sfx_gavel",
+          "source": {
+            "file": "demo/main.md",
+            "line": 318
+          }
+        },
+        {
+          "expression": "gavel",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 320
+          },
+          "speaker": "judge",
+          "text": "肃静！本案事实已经彻底明朗！\n辩护人的举证有力，事实清楚无误！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 324
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 284
+      }
+    },
+    "scene_court_intro": {
+      "id": "scene_court_intro",
+      "instructions": [
+        {
+          "background": "courtroom_judge",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 145
+          }
+        },
+        {
+          "bgm": "bgm_testimony",
+          "op": "bgm",
+          "source": {
+            "file": "demo/main.md",
+            "line": 146
+          }
+        },
+        {
+          "character": "judge",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 147
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 149
+          },
+          "speaker": "judge",
+          "text": "现在开庭审理本次案件。\n请检方传唤证人入庭作证。"
+        },
+        {
+          "character": "prosecutor",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 153
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 155
+          },
+          "speaker": "prosecutor",
+          "text": "控方证人已经在庭，随时可以陈述证言。"
+        },
+        {
+          "op": "goto",
+          "source": {
+            "file": "demo/main.md",
+            "line": 158
+          },
+          "target": "scene_court_testimony"
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 143
+      }
+    },
+    "scene_court_testimony": {
+      "id": "scene_court_testimony",
+      "instructions": [
+        {
+          "background": "courtroom_witness",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 162
+          }
+        },
+        {
+          "character": "witness",
+          "expression": "nervous",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 163
+          },
+          "visible": true
+        },
+        {
+          "expression": "nervous",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 165
+          },
+          "speaker": "witness",
+          "text": "我……我这就把昨晚目击到的事情一五一十地说出来！"
+        },
+        {
+          "op": "start_testimony",
+          "source": {
+            "file": "demo/main.md",
+            "line": 168
+          },
+          "testimony": "testimony_demo_01"
+        },
+        {
+          "op": "goto",
+          "source": {
+            "file": "demo/main.md",
+            "line": 202
+          },
+          "target": "scene_demo_ending"
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 160
+      }
+    },
+    "scene_court_wrong": {
+      "id": "scene_court_wrong",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_damage",
+          "source": {
+            "file": "demo/main.md",
+            "line": 270
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "sweat",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 271
+          },
+          "visible": true
+        },
+        {
+          "expression": "sweat",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 273
+          },
+          "speaker": "protagonist",
+          "text": "难道是我看错了证据……？！"
+        },
+        {
+          "character": "judge",
+          "expression": "stern",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 276
+          },
+          "visible": true
+        },
+        {
+          "expression": "stern",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 278
+          },
+          "speaker": "judge",
+          "text": "辩护人，请不要提出毫无根据的无理指控！\n法庭将予以惩罚！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 282
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 268
+      }
+    },
+    "scene_demo_ending": {
+      "id": "scene_demo_ending",
+      "instructions": [
+        {
+          "background": "office",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 328
+          }
+        },
+        {
+          "bgm": "bgm_reminiscence",
+          "op": "bgm",
+          "source": {
+            "file": "demo/main.md",
+            "line": 329
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "confident",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 330
+          },
+          "visible": true
+        },
+        {
+          "expression": "confident",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 332
+          },
+          "speaker": "protagonist",
+          "text": "审判顺利结束，被告人被当庭宣布无罪。\n这就是逆转裁判引擎的标准流程示范！"
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 326
+      }
+    },
+    "scene_demo_intro": {
+      "id": "scene_demo_intro",
+      "instructions": [
+        {
+          "background": "office",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 3
+          }
+        },
+        {
+          "bgm": "bgm_trial",
+          "op": "bgm",
+          "source": {
+            "file": "demo/main.md",
+            "line": 4
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 5
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 7
+          },
+          "speaker": "protagonist",
+          "text": "我是成步堂风格的新人辩护律师。\n今天是我接受委托调查案件的第一天。"
+        },
+        {
+          "op": "sfx",
+          "sfx": "sfx_desk_slam",
+          "source": {
+            "file": "demo/main.md",
+            "line": 11
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "confident",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 12
+          },
+          "visible": true
+        },
+        {
+          "expression": "confident",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 14
+          },
+          "speaker": "protagonist",
+          "text": "首先，必须准备好我的辩护律师徽章。"
+        },
+        {
+          "evidence": "attorney_badge",
+          "op": "evidence_add",
+          "source": {
+            "file": "demo/main.md",
+            "line": 17
+          }
+        },
+        {
+          "op": "sfx",
+          "sfx": "sfx_evidence_present",
+          "source": {
+            "file": "demo/main.md",
+            "line": 18
+          }
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 20
+          },
+          "speaker": "protagonist",
+          "text": "出发去现场之前，先整理一下案发情报。"
+        },
+        {
+          "op": "goto",
+          "source": {
+            "file": "demo/main.md",
+            "line": 23
+          },
+          "target": "scene_investigation_start"
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 1
+      }
+    },
+    "scene_examine_table": {
+      "id": "scene_examine_table",
+      "instructions": [
+        {
+          "character": "protagonist",
+          "expression": "thinking",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 127
+          },
+          "visible": true
+        },
+        {
+          "expression": "thinking",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 129
+          },
+          "speaker": "protagonist",
+          "text": "桌上放着一份刚刚整理好的现场记录……\n这就是关键的《案发报告》！"
+        },
+        {
+          "evidence": "crime_report",
+          "op": "evidence_add",
+          "source": {
+            "file": "demo/main.md",
+            "line": 133
+          }
+        },
+        {
+          "op": "sfx",
+          "sfx": "sfx_evidence_present",
+          "source": {
+            "file": "demo/main.md",
+            "line": 134
+          }
+        },
+        {
+          "expression": "confident",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 136
+          },
+          "speaker": "protagonist",
+          "text": "有了这个，现场调查就全部完成了。\n立刻动身前往法庭！"
+        },
+        {
+          "op": "investigation_end",
+          "source": {
+            "file": "demo/main.md",
+            "line": 140
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 125
+      }
+    },
+    "scene_examine_window": {
+      "id": "scene_examine_window",
+      "instructions": [
+        {
+          "character": "protagonist",
+          "expression": "thinking",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 77
+          },
+          "visible": true
+        },
+        {
+          "expression": "thinking",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 79
+          },
+          "speaker": "protagonist",
+          "text": "窗户紧闭着，从内部上了插销。\n外面似乎下过雨，窗沿上留有水痕。"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 83
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 75
+      }
+    },
+    "scene_inspect_watch_glass": {
+      "id": "scene_inspect_watch_glass",
+      "instructions": [
+        {
+          "expression": "thinking",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 354
+          },
+          "speaker": "protagonist",
+          "text": "仔细观察怀表的表盘玻璃，上面有明显的撞击裂痕。"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 357
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 352
+      }
+    },
+    "scene_investigation_start": {
+      "id": "scene_investigation_start",
+      "instructions": [
+        {
+          "background": "office",
+          "op": "bg",
+          "source": {
+            "file": "demo/main.md",
+            "line": 27
+          }
+        },
+        {
+          "bgm": "bgm_investigation",
+          "op": "bgm",
+          "source": {
+            "file": "demo/main.md",
+            "line": 28
+          }
+        },
+        {
+          "character": "assistant",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "right",
+          "source": {
+            "file": "demo/main.md",
+            "line": 29
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 31
+          },
+          "speaker": "assistant",
+          "text": "所长，现场调查已经准备就绪了。\n您可以随时在事务所和案发现场之间移动。"
+        },
+        {
+          "location": "location_office",
+          "op": "investigation",
+          "source": {
+            "file": "demo/main.md",
+            "line": 35
+          }
+        },
+        {
+          "op": "goto",
+          "source": {
+            "file": "demo/main.md",
+            "line": 36
+          },
+          "target": "scene_court_intro"
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 25
+      }
+    },
+    "scene_present_badge_office": {
+      "id": "scene_present_badge_office",
+      "instructions": [
+        {
+          "character": "assistant",
+          "expression": "worried",
+          "op": "stage",
+          "slot": "right",
+          "source": {
+            "file": "demo/main.md",
+            "line": 109
+          },
+          "visible": true
+        },
+        {
+          "expression": "worried",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 111
+          },
+          "speaker": "assistant",
+          "text": "所长，这是您的律师徽章，不用每次都出示给我看啦！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 114
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 107
+      }
+    },
+    "scene_present_generic_office": {
+      "id": "scene_present_generic_office",
+      "instructions": [
+        {
+          "character": "assistant",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "right",
+          "source": {
+            "file": "demo/main.md",
+            "line": 118
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 120
+          },
+          "speaker": "assistant",
+          "text": "这件证物……或许在法庭上才能派上用场呢。"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 123
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 116
+      }
+    },
+    "scene_press_s01": {
+      "id": "scene_press_s01",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_hold_it",
+          "source": {
+            "file": "demo/main.md",
+            "line": 206
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "point",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 207
+          },
+          "visible": true
+        },
+        {
+          "expression": "point",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 209
+          },
+          "speaker": "protagonist",
+          "text": "等等！\n你为什么会在那个时间路过那里？"
+        },
+        {
+          "character": "witness",
+          "expression": "nervous",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 213
+          },
+          "visible": true
+        },
+        {
+          "expression": "nervous",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 215
+          },
+          "speaker": "witness",
+          "text": "我只是散步路过而已，这并不犯法吧！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 218
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 204
+      }
+    },
+    "scene_press_s02": {
+      "id": "scene_press_s02",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_hold_it",
+          "source": {
+            "file": "demo/main.md",
+            "line": 222
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "thinking",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 223
+          },
+          "visible": true
+        },
+        {
+          "expression": "thinking",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 225
+          },
+          "speaker": "protagonist",
+          "text": "等等！\n既然屋里一片漆黑，你又是怎么看清人的样貌的？"
+        },
+        {
+          "character": "witness",
+          "expression": "sweat",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 229
+          },
+          "visible": true
+        },
+        {
+          "expression": "sweat",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 231
+          },
+          "speaker": "witness",
+          "text": "这、这个嘛……走廊上的月光稍微照亮了一点！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 234
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 220
+      }
+    },
+    "scene_press_s03": {
+      "id": "scene_press_s03",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_hold_it",
+          "source": {
+            "file": "demo/main.md",
+            "line": 238
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "point",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 239
+          },
+          "visible": true
+        },
+        {
+          "expression": "point",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 241
+          },
+          "speaker": "protagonist",
+          "text": "等等！\n你对案发时间为何如此笃定？"
+        },
+        {
+          "character": "witness",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 245
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 247
+          },
+          "speaker": "witness",
+          "text": "因为我当时特意看了一眼表，时间清清楚楚！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 250
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 236
+      }
+    },
+    "scene_press_s04": {
+      "id": "scene_press_s04",
+      "instructions": [
+        {
+          "op": "sfx",
+          "sfx": "sfx_hold_it",
+          "source": {
+            "file": "demo/main.md",
+            "line": 254
+          }
+        },
+        {
+          "character": "protagonist",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 255
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 257
+          },
+          "speaker": "protagonist",
+          "text": "等等！\n你确认现场附近没有其他可疑人员吗？"
+        },
+        {
+          "character": "witness",
+          "expression": "nervous",
+          "op": "stage",
+          "slot": "center",
+          "source": {
+            "file": "demo/main.md",
+            "line": 261
+          },
+          "visible": true
+        },
+        {
+          "expression": "nervous",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 263
+          },
+          "speaker": "witness",
+          "text": "没有，我发誓绝对没有看见其他人！"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 266
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 252
+      }
+    },
+    "scene_procedure_continue": {
+      "id": "scene_procedure_continue",
+      "instructions": [
+        {
+          "expression": "confident",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 338
+          },
+          "speaker": "protagonist",
+          "text": "庭审程序必须依法进行，不能草率结案！"
+        },
+        {
+          "op": "procedure_end",
+          "source": {
+            "file": "demo/main.md",
+            "line": 341
+          }
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 342
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 336
+      }
+    },
+    "scene_procedure_fail": {
+      "id": "scene_procedure_fail",
+      "instructions": [
+        {
+          "expression": "sweat",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 346
+          },
+          "speaker": "protagonist",
+          "text": "看来我的抗辩未能获得法庭认可……"
+        },
+        {
+          "op": "procedure_end",
+          "source": {
+            "file": "demo/main.md",
+            "line": 349
+          }
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 350
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 344
+      }
+    },
+    "scene_topic_alibi": {
+      "id": "scene_topic_alibi",
+      "instructions": [
+        {
+          "character": "assistant",
+          "expression": "normal",
+          "op": "stage",
+          "slot": "right",
+          "source": {
+            "file": "demo/main.md",
+            "line": 99
+          },
+          "visible": true
+        },
+        {
+          "expression": "normal",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 101
+          },
+          "speaker": "assistant",
+          "text": "根据目击者说法，案发时间是在昨夜九点。\n但现场似乎遗留了非常关键的书面证据。"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 105
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 97
+      }
+    },
+    "scene_topic_overview": {
+      "id": "scene_topic_overview",
+      "instructions": [
+        {
+          "character": "assistant",
+          "expression": "cheerful",
+          "op": "stage",
+          "slot": "right",
+          "source": {
+            "file": "demo/main.md",
+            "line": 88
+          },
+          "visible": true
+        },
+        {
+          "expression": "cheerful",
+          "op": "say",
+          "source": {
+            "file": "demo/main.md",
+            "line": 90
+          },
+          "speaker": "assistant",
+          "text": "被告人坚称案发当时自己并未进入过现场房间。\n只要能找到记录案发时间的报告，就能揭开真相！"
+        },
+        {
+          "op": "talk_unlock",
+          "source": {
+            "file": "demo/main.md",
+            "line": 94
+          },
+          "topic": "suspect_alibi"
+        },
+        {
+          "op": "return",
+          "source": {
+            "file": "demo/main.md",
+            "line": 95
+          }
+        }
+      ],
+      "source": {
+        "file": "demo/main.md",
+        "line": 86
+      }
+    }
+  },
+  "schema_version": 1,
+  "testimonies": {
+    "testimony_demo_01": {
+      "id": "testimony_demo_01",
+      "source": {
+        "file": "demo/main.md",
+        "line": 168
+      },
+      "statements": [
+        {
+          "expression": "normal",
+          "id": "demo_s01",
+          "present_rules": [],
+          "press_target": "scene_press_s01",
+          "source": {
+            "file": "demo/main.md",
+            "line": 172
+          },
+          "speaker": "witness",
+          "text": "昨晚九点整，我正好路过案发现场的门前。"
+        },
+        {
+          "expression": "nervous",
+          "id": "demo_s02",
+          "present_rules": [],
+          "press_target": "scene_press_s02",
+          "source": {
+            "file": "demo/main.md",
+            "line": 179
+          },
+          "speaker": "witness",
+          "text": "屋里一片漆黑，但我清清楚楚看见了被告人的身影！"
+        },
+        {
+          "expression": "normal",
+          "id": "demo_s03",
+          "present_rules": [
+            {
+              "evidence": "crime_report",
+              "required_version": "",
+              "result": "correct",
+              "source": {
+                "file": "demo/main.md",
+                "line": 192
+              },
+              "target": "scene_break_testimony"
+            }
+          ],
+          "press_target": "scene_press_s03",
+          "source": {
+            "file": "demo/main.md",
+            "line": 186
+          },
+          "speaker": "witness",
+          "text": "案发时间确凿无疑就是九点，绝对没有记错！"
+        },
+        {
+          "expression": "nervous",
+          "id": "demo_s04",
+          "present_rules": [],
+          "press_target": "scene_press_s04",
+          "source": {
+            "file": "demo/main.md",
+            "line": 194
+          },
+          "speaker": "witness",
+          "text": "所以，凶手除了被告人之外，不可能有别人了！"
+        }
+      ],
+      "wrong_penalty": 20,
+      "wrong_target": "scene_court_wrong"
+    }
+  }
+}

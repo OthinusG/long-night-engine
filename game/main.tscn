@@ -1,0 +1,252 @@
+[gd_scene load_steps=18 format=3]
+
+[ext_resource type="Script" path="res://game/main.gd" id="1"]
+[ext_resource type="PackedScene" path="res://game/ui/dialogue/dialogue_ui.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://game/ui/court/court_ui.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://game/ui/evidence/evidence_panel.tscn" id="4"]
+[ext_resource type="Script" path="res://game/ui/save/save_panel.gd" id="5"]
+[ext_resource type="Script" path="res://game/debug/debug_overlay.gd" id="6"]
+[ext_resource type="PackedScene" path="res://game/ui/investigation/investigation_ui.tscn" id="7"]
+[ext_resource type="PackedScene" path="res://game/ui/procedure/procedure_panel.tscn" id="8"]
+[ext_resource type="PackedScene" path="res://game/ui/evidence/evidence_inspection_ui.tscn" id="9"]
+[ext_resource type="PackedScene" path="res://game/ui/settings/settings_ui.tscn" id="10"]
+[ext_resource type="PackedScene" path="res://game/ui/title/title_screen.tscn" id="11"]
+[ext_resource type="PackedScene" path="res://game/ui/menu/pause_menu.tscn" id="12"]
+[ext_resource type="PackedScene" path="res://game/ui/save/save_load_panel.tscn" id="13"]
+[ext_resource type="PackedScene" path="res://game/ui/gallery/gallery_ui.tscn" id="14"]
+
+[sub_resource type="SystemFont" id="SystemFont_main"]
+font_names = PackedStringArray("PingFang SC", "Noto Sans CJK SC", "Arial Unicode MS")
+
+[sub_resource type="Theme" id="Theme_main"]
+default_font = SubResource("SystemFont_main")
+default_font_size = 18
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_save"]
+bg_color = Color(0.08, 0.11, 0.16, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35, 0.42, 0.55, 0.6)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+content_margin_left = 14.0
+content_margin_top = 12.0
+content_margin_right = 14.0
+content_margin_bottom = 12.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gear"]
+bg_color = Color(0.08, 0.11, 0.16, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.52, 0.65, 0.6)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_auto"]
+bg_color = Color(0.08, 0.11, 0.16, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45, 0.52, 0.65, 0.6)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_main")
+script = ExtResource("1")
+
+[node name="BackgroundView" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.094, 0.145, 0.227, 1)
+
+[node name="BackgroundLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -530.0
+offset_top = 24.0
+offset_right = -134.0
+offset_bottom = 52.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.45)
+theme_override_font_sizes/font_size = 14
+text = "BACKGROUND"
+horizontal_alignment = 2
+
+[node name="MenuGearButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 24.0
+offset_top = 18.0
+offset_right = 72.0
+offset_bottom = 62.0
+z_index = 100
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.9, 0.92, 0.96, 0.9)
+theme_override_colors/font_hover_color = Color(0.98, 0.85, 0.55, 1.0)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_gear")
+text = "⚙"
+tooltip_text = "系统菜单 (ESC / 鼠标右键)"
+
+[node name="AutoButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -118.0
+offset_top = 18.0
+offset_right = -24.0
+offset_bottom = 62.0
+grow_horizontal = 0
+z_index = 100
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.85, 0.88, 0.95, 0.85)
+theme_override_colors/font_hover_color = Color(0.98, 0.85, 0.55, 1.0)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_auto")
+text = "AUTO"
+tooltip_text = "自动播放 (快捷键 A)"
+
+[node name="GameTitle" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 88.0
+offset_top = 22.0
+offset_right = 456.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 1, 1, 0.75)
+theme_override_font_sizes/font_size = 24
+text = "长夜 / LONG NIGHT"
+
+[node name="CharacterStage" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+anchor_mode = 0
+position = Vector2(0, 0)
+
+[node name="StatusLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 32.0
+offset_top = 62.0
+offset_right = -320.0
+offset_bottom = 88.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.45)
+theme_override_font_sizes/font_size = 13
+text = "Runtime status"
+
+[node name="CourtUI" parent="." instance=ExtResource("3")]
+unique_name_in_owner = true
+z_index = 10
+
+[node name="DialogueUI" parent="." instance=ExtResource("2")]
+unique_name_in_owner = true
+z_index = 11
+
+[node name="EvidencePanel" parent="." instance=ExtResource("4")]
+unique_name_in_owner = true
+z_index = 20
+
+[node name="InvestigationUI" parent="." instance=ExtResource("7")]
+unique_name_in_owner = true
+z_index = 15
+
+[node name="ProcedurePanel" parent="." instance=ExtResource("8")]
+unique_name_in_owner = true
+z_index = 16
+
+[node name="EvidenceInspectionUI" parent="." instance=ExtResource("9")]
+unique_name_in_owner = true
+z_index = 22
+
+[node name="PauseMenu" parent="." instance=ExtResource("12")]
+unique_name_in_owner = true
+z_index = 28
+
+[node name="SaveLoadPanel" parent="." instance=ExtResource("13")]
+unique_name_in_owner = true
+z_index = 29
+
+[node name="GalleryUI" parent="." instance=ExtResource("14")]
+unique_name_in_owner = true
+z_index = 30
+
+[node name="TitleScreen" parent="." instance=ExtResource("11")]
+unique_name_in_owner = true
+z_index = 35
+
+[node name="SettingsUI" parent="." instance=ExtResource("10")]
+unique_name_in_owner = true
+z_index = 32
+
+[node name="DebugOverlay" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 40
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6")
+
+[node name="FeedbackLabel" type="Label" parent="."]
+unique_name_in_owner = true
+z_index = 30
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 160.0
+offset_bottom = 220.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 0.82, 0.35, 1)
+theme_override_font_sizes/font_size = 38
+horizontal_alignment = 1
+vertical_alignment = 1
